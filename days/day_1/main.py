@@ -1,4 +1,4 @@
-from solution import solution_1
+from solution import solution_1, solution_2
 
 
 if __name__ == "__main__":
@@ -7,3 +7,6 @@ if __name__ == "__main__":
 
     solution = solution_1(input_text)
     print("Solution 1:", solution)
+
+    solution = solution_2(input_text)
+    print("Solution 2:", solution)
