@@ -12,4 +12,10 @@ class TestSolution1:
 
 
 class TestSolution2:
-    pass
+    def test_example_case(self):
+        text = "A Y\nB X\nC Z"
+
+        expected = 12
+        result = solution_2(text)
+
+        assert result == expected
