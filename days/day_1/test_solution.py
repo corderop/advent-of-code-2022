@@ -1,4 +1,4 @@
-from .solution import solution_1, solution_2
+from solution import solution_1, solution_2
 
 
 class TestSolution1:
