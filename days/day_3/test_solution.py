@@ -19,4 +19,17 @@ class TestSolution1:
 
 
 class TestSolution2:
-    pass
+    def test_example(self):
+        text = (
+            "vJrwpWtwJgWrhcsFMMfFFhFp\n"
+            "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\n"
+            "PmmdzqPrVvPwwTWBwg\n"
+            "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\n"
+            "ttgJtRGJQctTZtZT\n"
+            "CrZsJsPPZsGzwwsLwLmpwMDw\n"
+        )
+
+        expected = 70
+        result = solution_2(text)
+
+        assert result == expected

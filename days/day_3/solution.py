@@ -1,5 +1,10 @@
 from solution_types import POINTS
-from utils import get_duplicated_item, split_in_half
+from utils import (
+    get_common_item,
+    get_duplicated_item,
+    split_backpacks_in_groups,
+    split_in_half,
+)
 
 
 def solution_1(input_text: str):
@@ -16,4 +21,12 @@ def solution_1(input_text: str):
 
 
 def solution_2(input_text: str):
-    pass
+    points = 0
+    backpacks = input_text.splitlines()
+    groups = split_backpacks_in_groups(backpacks)
+
+    for group in groups:
+        item = get_common_item(group)
+        points += POINTS.get(item)
+
+    return points
