@@ -7,3 +7,7 @@ def parse_pairs_from_text(input_text):
 
 def does_fully_contain(elf_1, elf_2):
     return elf_1[0] <= elf_2[0] and elf_1[1] >= elf_2[1]
+
+
+def does_overlap(elf_1, elf_2):
+    return elf_1[1] >= elf_2[0] and elf_1[1] <= elf_2[1]
