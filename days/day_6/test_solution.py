@@ -44,4 +44,42 @@ class TestSolution1:
 
 
 class TestSolution2:
-    pass
+    def test_example_1(self):
+        text = "mjqjpqmgbljsphdztnvjfqwrcgsmlb"
+
+        expected = 19
+        result = solution_2(text)
+
+        assert result == expected
+
+    def test_example_2(self):
+        text = "bvwbjplbgvbhsrlpgdmjqwftvncz"
+
+        expected = 23
+        result = solution_2(text)
+
+        assert result == expected
+
+    def test_example_3(self):
+        text = "nppdvjthqldpwncqszvftbrmjlhg"
+
+        expected = 23
+        result = solution_2(text)
+
+        assert result == expected
+
+    def test_example_4(self):
+        text = "nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg"
+
+        expected = 29
+        result = solution_2(text)
+
+        assert result == expected
+
+    def test_example_5(self):
+        text = "zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw"
+
+        expected = 26
+        result = solution_2(text)
+
+        assert result == expected
