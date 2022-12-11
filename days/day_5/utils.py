@@ -13,9 +13,10 @@ def remove_elements_from_stack(layout, number, stack):
     return layout
 
 
-def get_elements_to_move(layout, number, stack):
+def get_elements_to_move(layout, number, stack, reverse=True):
     elements = layout[stack - 1][-number:]
-    elements.reverse()
+    if reverse:
+        elements.reverse()
 
     return elements
 

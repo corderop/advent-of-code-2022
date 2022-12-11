@@ -77,4 +77,20 @@ class TestSolution1:
 
 
 class TestSolution2:
-    pass
+    def test_example(self):
+        text = (
+            "    [D]    \n"
+            "[N] [C]    \n"
+            "[Z] [M] [P]\n"
+            " 1   2   3 \n"
+            "\n"
+            "move 1 from 2 to 1\n"
+            "move 3 from 1 to 3\n"
+            "move 2 from 2 to 1\n"
+            "move 1 from 1 to 2\n"
+        )
+
+        expected = "MCD"
+        result = solution_2(text)
+
+        assert result == expected
