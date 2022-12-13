@@ -12,4 +12,10 @@ class TestSolution1:
 
 
 class TestSolution2:
-    pass
+    def test_example(self):
+        text = "30373\n25512\n65332\n33549\n35390\n"
+
+        expected = 8
+        result = solution_2(text)
+
+        assert result == expected
