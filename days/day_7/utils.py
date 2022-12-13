@@ -1,28 +1,23 @@
 from file_tree import FileTree
 
 
-def calculate_size_of_all_folders(file_tree: FileTree):
+def calculate_size_of_all_folders(file_tree: FileTree, max_folder_size: int):
     total_size = 0
     all_folders = file_tree.get_all_folders()
 
     for folder in all_folders:
-        try:
-            size = calculate_folder_size(folder)
+        size = calculate_folder_size(folder)
+        if size < max_folder_size:
             total_size += size
-        except Exception:
-            pass  # More than 100000
 
     return total_size
 
 
-def calculate_folder_size(folder, max_size=100000):
+def calculate_folder_size(folder):
     size = sum(folder.files.values())
 
-    if size > max_size:
-        raise Exception("Too big")
-
     for child in folder.children:
-        size += calculate_folder_size(child, max_size - size)
+        size += calculate_folder_size(child)
 
     return size
 

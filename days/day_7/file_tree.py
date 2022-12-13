@@ -44,3 +44,6 @@ class FileTree:
 
     def get_all_folders(self):
         return self.__all_folders
+
+    def get_root(self):
+        return self.__root
